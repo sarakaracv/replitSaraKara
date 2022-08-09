@@ -12,20 +12,18 @@ If there is no x or X as the first or last character print the word untouched
         Scanner scan = new Scanner(System.in);
         String word = scan.next();
 
+        if ((word.startsWith("x") || word.startsWith("X")) && (word.endsWith("x") || (word.endsWith("X")))){
+            System.out.println(word.substring(1, word.length()-1));
+        }
 
-        if (word.contains("x")||word.contains("X")) {
-            if ((word.startsWith("x") || word.startsWith("X")) && (word.endsWith("x") || word.endsWith("X"))) {
-                System.out.println(word.substring(word.indexOf("x") + 1, word.lastIndexOf("x")));
-            }
-            if (!(word.startsWith("x") || word.startsWith("X")) && (word.endsWith("x") || word.endsWith("X"))) {
-                System.out.println(word.substring(0, word.lastIndexOf("x")));
-            }
-            if ((word.startsWith("x") || word.startsWith("X")) && !(word.endsWith("x") || word.endsWith("X"))) {
-                System.out.println(word.substring(word.indexOf("x") + 1));
-            }
-        }  if (!(word.contains("x") )||!(word.startsWith("x") || word.startsWith("X")) || !(word.endsWith("x") || word.endsWith("X"))){
-            System.out.println(word);// sonuncu gecmiyor??
-
+        else if(word.startsWith("x") || word.startsWith("X")){
+            System.out.println(word.substring(1));
+        }
+        else if(word.endsWith("x") || (word.endsWith("X"))){
+            System.out.println(word.substring(0, word.length()-1));
+        }
+        else {
+            System.out.println(word);
         }
     }
 }
