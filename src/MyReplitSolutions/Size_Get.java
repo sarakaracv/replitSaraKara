@@ -27,19 +27,18 @@ arr[4]
         ArrayList<Integer> list = new ArrayList<>();
         for(int i=0; i < size; i++) {
             list.add(in.nextInt());
-            list.get(i);
-            int sum=0;
-            sum+=size;
-
-
-            System.out.println(sum-i);
         }
 
         // Write your code below
 
+        list.getClass();
+        int sum = 0;
 
+        for (Integer each : list) {
+            sum += each;
+        }
 
-
+        System.out.println(sum);
 
 
     }

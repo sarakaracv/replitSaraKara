@@ -1,6 +1,6 @@
 package MyReplitSolutions;
 
-import java.util.Locale;
+
 import java.util.Scanner;
 
 public class ShoppingList {
@@ -57,29 +57,37 @@ Total cost: $19.6
         int count = 1;
         double totalPrice = 0;
 
+
+
+
         do {
+
             System.out.println("Enter the name of item "+count);
             item = scan.next();
+
             System.out.printf("Enter the price of the "+item);
             price = scan.nextDouble();
-            System.out.println("\nHow many "+item+" will you buy?");
-            int itemMany= scan.nextInt();
-            count++;
-            totalPrice += price*itemMany;
 
-            shoppingListReport += (item+" x "+ itemMany + " - $" + totalPrice +"\n");
+            System.out.println("\nHow many "+item+" will you buy?");
+            int quantity= scan.nextInt();
+
+
+            totalPrice+= price*quantity ;
+
 
             System.out.println("Do you want to add more items to the shopping list?");
             addMore = scan.next();
+            count+=1;
+
+            shoppingListReport += (item+" x "+ quantity + " - $" + totalPrice +"\n");
 
         } while (addMore.equalsIgnoreCase("yes"));
+
+
         System.out.println("SHOPPING LIST:");
-        System.out.println(shoppingListReport.substring(0, shoppingListReport.length()-1));
+        System.out.println(shoppingListReport.substring(0, shoppingListReport.length()-count));
+
         System.out.println("Total cost: $" + totalPrice);
-
-
-
-
 
     }
 }

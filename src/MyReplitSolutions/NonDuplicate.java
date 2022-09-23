@@ -1,5 +1,7 @@
 package MyReplitSolutions;
 
+import java.util.Scanner;
+
 public class NonDuplicate {
     /*
     Given an `int []` `nums` that has duplicate numbers, which means each numbers is found twice in the array.
@@ -16,4 +18,20 @@ Input:
 Output:
   44 (more than one unique number. but 44 is the first)
      */
+    public static void main(String[] args) {
+        //DO NOT TOUCH BELOW:
+        Scanner input = new Scanner(System.in);
+        int[] nums = {input.nextInt(), input.nextInt(),input.nextInt(),input.nextInt(),input.nextInt(),input.nextInt(),input.nextInt()};
+
+        //WRITE YOUR CODE BELOW:
+//        int count = 0;
+//        for(int i=0; i<nums.length; i++) {
+//            for(int j=0; j<nums.length; j++{
+//                while(nums.==nums[j]){
+//                    count++;}
+//                if(count == 1)
+//                    System.out.println(nums);
+//            }}
+
+    }
 }
